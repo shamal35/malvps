@@ -1,0 +1,4 @@
+- name: Install Docker on Windows
+  run: |
+    choco install docker-desktop -y
+    echo "Docker has been installed on Windows Server"
