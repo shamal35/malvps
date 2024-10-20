@@ -1,0 +1,20 @@
+name: Windows VPS-like Environment
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  windows-job:
+    runs-on: windows-latest
+
+    steps:
+    - name: Check out the repository
+      uses: actions/checkout@v2
+
+    - name: Set up Windows Environment
+      run: |
+        echo "Updating Windows..."
+        choco install git -y
+        echo "You can run Windows commands here!"
